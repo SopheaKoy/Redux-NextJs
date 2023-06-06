@@ -1,6 +1,10 @@
+"use client"
+import { selectCart } from "@/redux/features/cart/cartSlice";
 import React from "react";
+import { useSelector } from "react-redux";
 
 export default function NarBarComponents() {
+  const cart = useSelector(selectCart);
   return (
     <div>
       <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
@@ -18,7 +22,7 @@ export default function NarBarComponents() {
           <div class="flex md:order-2">
             <button
               type="button"
-              class="relative inline-flex items-center p-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              class="relative inline-flex items-center p-3 text-sm font-medium text-center text-white  rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
               {/* <svg
                 class="w-6 h-6"
                 aria-hidden="true"
@@ -31,7 +35,7 @@ export default function NarBarComponents() {
               <img src="/icons/shopping-cart.png" alt="cart" className="w-6 h-6"/>
               <span class="sr-only">Notifications</span>
               <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900">
-                20
+                {cart.length}
               </div>
             </button>
 

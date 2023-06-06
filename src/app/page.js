@@ -18,6 +18,7 @@ export default function Home() {
       id={product.id}
       name={product.name}
       price={product.price}
+      qunatity={product.quantity}
       image={product.image}
      />
     </main>
