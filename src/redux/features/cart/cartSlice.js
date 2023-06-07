@@ -13,11 +13,12 @@ const cartSlice = createSlice({
           const { id, name, price, quantity, image, description } = action.payload
           const existingItem = state.cart.find(item => item.id === id)
 
-          if (existingItem) {
-              alert('Item already in cart')
-          } else {
-              state.cart.push({ id, name, price, quantity, image, description })
-          }
+          // if (existingItem) {
+          //     alert('Item already in cart')
+          // } else {
+          //     state.cart.push({ id, name, price, quantity, image, description })
+          // }
+          state.cart.push({ id, name, price, quantity, image, description })
           state.total += price * quantity
       },
       increaseQuantity(state, action) {

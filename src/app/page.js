@@ -5,10 +5,10 @@ import { useState } from "react";
 export default function Home() {
   const [product, setProduct] = useState({
     id : 1,
-    name : "Product 1",
+    name : "Book",
     price : 100,
-    quantity : 1, 
-    image : "https://i.pinimg.com/236x/14/c4/ed/14c4edea989244069c30fdfce5b5b317.jpg",
+    quantity : 1.5, 
+    image : "https://i.pinimg.com/564x/2c/d1/7a/2cd17a3db4212d40711fa02465fad587.jpg",
     description:"this is the description",
   });
   return (

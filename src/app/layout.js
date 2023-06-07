@@ -1,7 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import ProviderRedux  from '../redux/ProviderRedux'
-import NarBarComponents from '@/components/NarBarComponents'
+import NarBarComponents from '@/components/NavBarComponents'
 
 const inter = Inter({ subsets: ['latin'] })
 
